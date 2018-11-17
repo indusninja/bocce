@@ -1,0 +1,7 @@
+pipeline:
+  restore:
+    image: gmantaos/monogame
+    commands: nuget restore BocceEngine.sln
+  build:
+    image: gmantaos/monogame
+    commands: msbuild /p:Configuration=Release
